@@ -32,15 +32,6 @@ function TabId(props) {
   )
 }
 
-// function WhiteSpace(props) {
-//   return (
-//     <button
-//       className={"App-tab-whitespace"}
-//     ></button>
-//   )
-// }
-
-
 
 
 class Exhibit extends React.Component {
@@ -75,7 +66,6 @@ class Exhibit extends React.Component {
 
   render() {
 
-    // for (let i = 0; i < this.state.tabIds.length; i++) {
     let noDataGiven = false;
 
     return (
