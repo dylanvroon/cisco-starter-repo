@@ -1,3 +1,27 @@
+html {
+  height: 100vh - 40px;
+}
+
+#blueGrad {
+  background-image: linear-gradient(to bottom right, #99ffff, #5c5cd6);
+  
+}
+
+body {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left:40px;
+  margin-right:40px;
+  padding: 0;
+  background-color: #99ffff;
+  background-image: linear-gradient(to bottom right, #99ffff, #5c5cd6);
+  height: 100vh - 50px;
+  width: 100vw - 80px;
+}
+
+
+
+
 .App {
   text-align: center;
 }
@@ -14,7 +38,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #4276de;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +50,115 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-banner {
+  align-items: center;
+  font-size: 25px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  /* background-color: #ff9999; */
+}
+
+.App-banner-border {
+  background: #c5c5c5;
+  border: 5px solid black;
+  border-style: solid solid hidden solid;
+  border-color: black;
+  border-width: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+}
+
+.App-tab-row {
+  overflow: hidden;
+  position: absolute;
+  width: calc(100vw - 86px);
+  height: 62px;
+  color: black;
+  padding: 0px;
+  display: inline;
+  border: 3px solid #000;
+  border-style: hidden solid;
+  background: #c5c5c5;
+  background-color: #c5c5c5;
+  background-image: linear-gradient( #c5c5c5, #fff);
+}
+
+.App-tab-ids {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 150px;
+  height: 62px;
+  color: black;
+  padding: 0px;
+  border: 3px hidden #000;
+  border-radius: 10px 10px 0 0;
+  border-right-style: solid;
+  border-top-style: outset;
+  border-width: 1px 3px;
+  background: #d5d5d5;
+  display: inline;
+}
+
+.App-tab-ids:hover {
+  background: #dfdfdf;
+}
+
+.App-tab-ids_active {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 150px;
+  height: 62px;
+  color: black;
+  padding: 0px;
+  display: inline;
+  background: #fff;
+  border: 3px hidden #000;
+  border-radius: 10px 10px 0 0;
+  border-right-style: solid;
+  border-top-style: outset;
+  border-width: 1px 3px;
+}
+
+.App-tab-ids:focus {
+  outline: none;
+}
+
+/* .App-tab-whitespace {
+  width: calc(100vw - 80px);
+  height: 62px;
+  color: black;
+  padding: 0px;
+  display: inline;
+  border: 3px solid #000;
+  border-bottom-style: hidden;
+  background: #c5c5c5;
+  
+} */
+
+
+.App-tab-contents_hidden {
+  display: none;
+}
+.App-tab-contents_visible {
+  background: #fff;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-top: 77px;
+  padding-left: 15px;
+  height: calc(100vh - 227px);
+  color: black;
+  border: 3px solid black;
+  border-top-style: hidden;
+  
 }
 
 @keyframes App-logo-spin {
