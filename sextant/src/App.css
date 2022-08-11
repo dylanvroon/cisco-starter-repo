@@ -55,7 +55,7 @@ body {
 .App-banner {
   align-items: center;
   font-size: 25px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Ubuntu, sans-serif;
   font-weight: bold;
   color: black;
   /* background-color: #ff9999; */
@@ -69,7 +69,7 @@ body {
   border-width: 3px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 50px;
+  padding-left: 25px;
 }
 
 .App-tab-row {
@@ -91,7 +91,7 @@ body {
   position: relative;
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:  Helvetica, sans-serif;
   width: 150px;
   height: 62px;
   color: black;
@@ -112,7 +112,7 @@ body {
 .App-tab-ids_active {
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   width: 150px;
   height: 62px;
   color: black;
@@ -150,9 +150,8 @@ body {
   background: #fff;
   display: block;
   font-size: 15px;
-  font-weight: bold;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding-top: 77px;
+  font-family:  Garamond, serif;
+  padding-top: 65px;
   padding-left: 15px;
   height: calc(100vh - 227px);
   color: black;

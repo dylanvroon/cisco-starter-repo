@@ -33,6 +33,61 @@ function TabId(props) {
 }
 
 
+class FetchIP extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ip_version: props.ip_version,
+      ipv4_address: "Still Loading",
+      ipv6_address: "Still loading"
+    }
+    this.getIP('https://api.ipify.org', 4);
+    if (props.ip_version === 6) {
+      this.getIP('https://api64.ipify.org', 6);
+    }
+  }
+
+  getIP(url, ip_version) {
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();})
+      .then((addy) => {
+        if (ip_version === 4) 
+          this.setState({ipv4_address: addy});
+        else this.setState({ipv6_address: addy});
+      })
+    return;
+  }
+
+  render() {
+    
+    if (this.state.ip_version === 4) {
+      return (
+        <h3>
+          {"User's IPv4 Network Address: " + this.state.ipv4_address}
+        </h3>
+      )
+    } else if (this.state.ipv4_address === this.state.ipv6_address) {
+      return (
+        <h3>
+          {"User's IPv6 Address: Unavailable (See IPv4 Address Instead)"}
+        </h3>
+      )
+    } else {
+      return (
+        <h3>
+          {"User's IPv6 Network Address: " + this.state.ipv6_address}
+        </h3>
+      )
+    }
+    
+  }
+}
+
+
 
 class Exhibit extends React.Component {
   constructor(props) {
@@ -62,6 +117,8 @@ class Exhibit extends React.Component {
   changeTab(i) {
     this.setState({currTab: i});
   }
+
+
 
 
   render() {
@@ -116,21 +173,18 @@ class Exhibit extends React.Component {
 //   )
 // }
 
+
+
 function App() {
   return (
     <div>
       <Exhibit
-        tabIds={["Public IP", "Latency Info", "Example3", "Example4"]}
+        tabIds={["IPv4 Address", "IPv6 Address"]}
       >
-        <h2 >
-          Public IP Address Info Here
-        </h2>
-        <h2>
-          Latency information for packets emerging from Pylon
-        </h2>
-        <h2>
-          Third data point
-        </h2>
+        <FetchIP ip_version={4}>
+        </FetchIP>
+        <FetchIP ip_version={6}>
+        </FetchIP>
       </Exhibit>
         
       
