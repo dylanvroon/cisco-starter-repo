@@ -15,8 +15,8 @@ body {
   padding: 0;
   background-color: #99ffff;
   background-image: linear-gradient(to bottom right, #99ffff, #5c5cd6);
-  height: 100vh - 50px;
-  width: 100vw - 80px;
+  height: calc(100vh - 50px);
+  width: calc(100vw - 80px);
 }
 
 
@@ -69,7 +69,7 @@ body {
   border-width: 3px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 25px;
+  padding-left: 55px;
 }
 
 .App-tab-row {
@@ -86,6 +86,15 @@ body {
   background-color: #c5c5c5;
   background-image: linear-gradient( #c5c5c5, #fff);
 }
+
+.App-tab-row-whitespace {
+  position: relative;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  display: inline;
+}
+
 
 .App-tab-ids {
   position: relative;
@@ -159,6 +168,113 @@ body {
   border-top-style: hidden;
   
 }
+
+.Data-Template {
+  margin: 25px 0 0 25px;
+  padding-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 15px;
+  height: 45px;
+  font-size: 40px;
+  font-family:  Garamond, serif;
+  display: inline-flex;
+  border-radius: 10px;
+  /* background-color: rgb(213, 213, 213); */
+  background-color: rgba(153, 255, 255, 0.5);
+  background-image: linear-gradient(to bottom right, rgba(153, 255, 255, 0.5), rgba(92, 92, 214, 0.4));
+  width: 450px;
+  text-align: center;
+}
+
+.Pylon-Total-Received {
+  margin-left:auto;
+  display: inline;
+  font-size: 18px;
+  font-weight: bold;
+  font-family:  Garamond, serif;
+  background-color: transparent;
+  border: 2px hidden black;
+  border-right-style: solid;
+  border-right-width: 2px;
+  padding-right: 10px;
+}
+
+.Pylon-Avg-Latency {
+  margin-right : auto;
+  display: inline;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family:  Garamond, serif;
+  background-color: transparent;
+  border: 0px solid black;
+}
+
+.IP-Address {
+  margin: auto;
+  display: inline;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Garamond, serif;
+  background-color: transparent;
+  border: 0px solid black;
+}
+
+.IP-Address_hidden {
+  margin: auto;
+  display: none;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Garamond, serif;
+  background-color: transparent;
+  border: 0px solid black;
+}
+
+#Pylon-table {
+  font-size: 18px;
+  font-family: Garamond, serif;
+  padding-left: 300px;
+  margin-top: 35px;
+  margin-left: 25px;
+  padding-top: 50px;
+  width: 480px;
+  border-collapse: collapse;
+}
+
+#Pylon-table th, #Pylon-table td, #Pylon-table thead {
+  border-bottom: 1px solid #d5d5d5;
+  padding: 8px;
+}
+
+#Pylon-table th {
+  text-align: center;
+  display: table-cell;
+  font-size: 18px;
+  font-weight: bold;
+  font-family:  Garamond, serif;
+  border-top: 1px solid #d5d5d5;
+  width: 450px;
+}
+
+#Pylon-table thead {
+  text-align: center;
+  display: table-caption;
+  font-size: 18px;
+  font-weight: bold;
+  font-family:  Garamond, serif;
+  
+  width: auto;
+}
+
+#Pylon-table td {
+  text-align: center;
+  font-size: 15px;
+  font-family: Garamond, serif;
+}
+.green { background-color: #99ff66; }
+.orange { background-color: #ffad33; }
+.red { background-color: #ff4d4d; }
 
 @keyframes App-logo-spin {
   from {
