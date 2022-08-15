@@ -63,6 +63,9 @@ class FetchIP extends React.Component {
   }
 
   render() {
+    if (this.state.ipv4_address === 'Still Loading') {
+      this.getIP('https://api.ipify.org', 4);
+    }
     
     if (this.state.ip_version === 4) {
       return (
@@ -158,8 +161,8 @@ class PylonLatency extends React.Component {
   showTime(time) {
     var d = new Date(time);
     var h = d.getHours();
-    if (h < 10) {
-      h = '0' + h;
+    if (h > 12) {
+      h = h - 12;
     }
     var m = d.getMinutes();
     if (m < 10) {
@@ -292,7 +295,7 @@ class PylonLatency extends React.Component {
           </table>
           <div className={'Data-Template'}>
             <button className={'IP-Address'}>
-              {"Connection Closed"}
+              {"Connection closed (reload to restart)"}
             </button>
           </div>
         </div>
@@ -339,7 +342,7 @@ class Exhibit extends React.Component {
     let noDataGiven = false;
 
     return (
-      <div>
+      <div className= {'Exhibit'}>
         <Banner message="SEXTANT NETWORK INFORMATION">
         </Banner>
         <div className={"App-tab-row"}>
@@ -379,13 +382,6 @@ class Exhibit extends React.Component {
   }
 }
 
-// function T(props) {
-//   return (
-//     <div class="tab">
-
-//     </div>
-//   )
-// }
 
 
 

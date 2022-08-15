@@ -10,8 +10,8 @@ html {
 body {
   margin-top: 25px;
   margin-bottom: 25px;
-  margin-left:40px;
-  margin-right:40px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
   background-color: #99ffff;
   background-image: linear-gradient(to bottom right, #99ffff, #5c5cd6);
@@ -24,6 +24,7 @@ body {
 
 .App {
   text-align: center;
+  margin: auto;
 }
 
 .App-logo {
@@ -50,6 +51,11 @@ body {
 
 .App-link {
   color: #61dafb;
+}
+
+.Exhibit {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .App-banner {
