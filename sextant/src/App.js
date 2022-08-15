@@ -116,8 +116,6 @@ class PylonLatency extends React.Component {
       mostRecent: Array(0),
       closed: false,
     };
-    console.clear();
-
   }
 
   createWebSocket() {
@@ -184,7 +182,7 @@ class PylonLatency extends React.Component {
     if (this.state.mostRecent !== null && this.state.mostRecent.length > index) {
       var lat = this.state.mostRecent[index].latency;
       var color = 'none';
-      if (lat < (this.state.avgLatency * 4/3 || lat < 2)) {
+      if (lat < (this.state.avgLatency * 4/3) || lat < 2) {
         color = 'green';
       } else if (lat < this.state.avgLatency * 3) {
         color = 'orange';
